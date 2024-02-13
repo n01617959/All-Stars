@@ -1,0 +1,50 @@
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.AssemblyReference.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.inventoryManagement.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Properties.Resources.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.GenerateResource.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe.config
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.pdb
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Orders.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Payments.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Receiptsummarycs.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form1.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form2.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Report.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe.config
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.pdb
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form1.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form2.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Orders.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.inventoryManagement.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Payments.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Properties.Resources.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Receiptsummarycs.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Report.resources
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
+C:\Users\HP\source\repos\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe.config
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.pdb
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.AssemblyReference.cache
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form1.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form2.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Orders.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.inventoryManagement.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Payments.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Properties.Resources.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Receiptsummarycs.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Report.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.GenerateResource.cache
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.SalaryForm.resources
+D:\sem-2_ITE\c#git\AllStarsGroupProject\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.StaffManagement.resources
