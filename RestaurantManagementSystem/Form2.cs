@@ -30,8 +30,7 @@ namespace RestaurantManagementSystem
         {
             inventoryManagement inventory = new inventoryManagement();
             inventory.Show();
-            
-          
+            this.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -57,7 +56,9 @@ namespace RestaurantManagementSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            inventoryManagement inventory = new inventoryManagement();
+            inventory.Show();
+            this.Close();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -70,6 +71,20 @@ namespace RestaurantManagementSystem
             StaffManagement staffManagementForm;
             staffManagementForm = new StaffManagement();
             staffManagementForm.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Orders orders = new Orders();
+            orders.Show();
+            this.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
             this.Close();
         }
     }

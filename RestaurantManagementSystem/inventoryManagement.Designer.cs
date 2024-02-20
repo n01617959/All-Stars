@@ -33,12 +33,12 @@
             this.newButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.categoryTextBox = new System.Windows.Forms.ComboBox();
+            this.itemIDTextBox = new System.Windows.Forms.TextBox();
+            this.itemNameTextBox = new System.Windows.Forms.TextBox();
+            this.quantityTextBox = new System.Windows.Forms.TextBox();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -79,8 +79,9 @@
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(156, 34);
             this.newButton.TabIndex = 2;
-            this.newButton.Text = "New";
+            this.newButton.Text = "Add New";
             this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // deleteButton
             // 
@@ -92,6 +93,7 @@
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // updateButton
             // 
@@ -103,49 +105,55 @@
             this.updateButton.TabIndex = 5;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
-            // comboBox1
+            // categoryTextBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(694, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 24);
-            this.comboBox1.TabIndex = 6;
+            this.categoryTextBox.FormattingEnabled = true;
+            this.categoryTextBox.Items.AddRange(new object[] {
+            "Food",
+            "Drink",
+            "Bakery"});
+            this.categoryTextBox.Location = new System.Drawing.Point(694, 131);
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.Size = new System.Drawing.Size(187, 24);
+            this.categoryTextBox.TabIndex = 6;
             // 
-            // textBox1
+            // itemIDTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 7;
+            this.itemIDTextBox.Location = new System.Drawing.Point(60, 133);
+            this.itemIDTextBox.Name = "itemIDTextBox";
+            this.itemIDTextBox.Size = new System.Drawing.Size(187, 22);
+            this.itemIDTextBox.TabIndex = 7;
             // 
-            // textBox2
+            // itemNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(375, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 22);
-            this.textBox2.TabIndex = 8;
+            this.itemNameTextBox.Location = new System.Drawing.Point(375, 133);
+            this.itemNameTextBox.Name = "itemNameTextBox";
+            this.itemNameTextBox.Size = new System.Drawing.Size(187, 22);
+            this.itemNameTextBox.TabIndex = 8;
             // 
-            // textBox3
+            // quantityTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(694, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 22);
-            this.textBox3.TabIndex = 9;
+            this.quantityTextBox.Location = new System.Drawing.Point(694, 189);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(187, 22);
+            this.quantityTextBox.TabIndex = 9;
             // 
-            // textBox4
+            // priceTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(60, 189);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 22);
-            this.textBox4.TabIndex = 10;
+            this.priceTextBox.Location = new System.Drawing.Point(60, 189);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(187, 22);
+            this.priceTextBox.TabIndex = 10;
             // 
-            // textBox5
+            // descriptionTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(375, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 22);
-            this.textBox5.TabIndex = 11;
+            this.descriptionTextBox.Location = new System.Drawing.Point(375, 189);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(187, 22);
+            this.descriptionTextBox.TabIndex = 11;
+            this.descriptionTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label2
             // 
@@ -231,12 +239,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.priceTextBox);
+            this.Controls.Add(this.quantityTextBox);
+            this.Controls.Add(this.itemNameTextBox);
+            this.Controls.Add(this.itemIDTextBox);
+            this.Controls.Add(this.categoryTextBox);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.newButton);
@@ -244,6 +252,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "inventoryManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management Section";
             this.Load += new System.EventHandler(this.inventoryManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGridView)).EndInit();
@@ -259,12 +268,12 @@
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button updateButton;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox categoryTextBox;
+        private System.Windows.Forms.TextBox itemIDTextBox;
+        private System.Windows.Forms.TextBox itemNameTextBox;
+        private System.Windows.Forms.TextBox quantityTextBox;
+        private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

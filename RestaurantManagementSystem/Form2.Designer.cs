@@ -250,9 +250,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(976, 205);
+            this.panel6.Location = new System.Drawing.Point(959, 205);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(210, 133);
+            this.panel6.Size = new System.Drawing.Size(227, 133);
             this.panel6.TabIndex = 7;
             // 
             // label6
@@ -274,6 +274,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -289,12 +290,13 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(995, 170);
+            this.pictureBox6.Location = new System.Drawing.Point(982, 170);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(68, 71);
+            this.pictureBox6.Size = new System.Drawing.Size(59, 56);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // Form2
             // 
