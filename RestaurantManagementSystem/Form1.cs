@@ -15,6 +15,8 @@ namespace RestaurantManagementSystem
         public Form1()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +57,18 @@ namespace RestaurantManagementSystem
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
 
         }
     }
