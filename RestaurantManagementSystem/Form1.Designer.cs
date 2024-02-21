@@ -132,7 +132,7 @@
             // 
             this.txtPassword.AcceptsTab = true;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.ForeColor = System.Drawing.Color.Yellow;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Location = new System.Drawing.Point(86, 309);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
