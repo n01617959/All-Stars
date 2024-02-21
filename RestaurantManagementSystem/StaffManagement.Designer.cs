@@ -137,7 +137,7 @@
             this.label6.AutoSize = true;
             this.label6.CausesValidation = false;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(370, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(398, 34);
@@ -159,7 +159,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnAdd.BackColor = System.Drawing.Color.Black;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Location = new System.Drawing.Point(297, 666);
             this.btnAdd.Name = "btnAdd";
@@ -171,7 +171,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelete.Location = new System.Drawing.Point(637, 666);
             this.btnDelete.Name = "btnDelete";
@@ -183,7 +183,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.Black;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdate.Location = new System.Drawing.Point(297, 728);
             this.btnUpdate.Name = "btnUpdate";
@@ -195,7 +195,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnClear.BackColor = System.Drawing.Color.Black;
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClear.Location = new System.Drawing.Point(637, 728);
             this.btnClear.Name = "btnClear";
@@ -207,7 +207,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
@@ -220,7 +220,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(38, 246);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 172);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(188, 125);
             this.pictureBox1.TabIndex = 3;
@@ -230,7 +230,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 90);
+            this.label7.Location = new System.Drawing.Point(31, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 38);
             this.label7.TabIndex = 2;
@@ -238,7 +238,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkBlue;
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(38, 628);
             this.button1.Name = "button1";
@@ -250,7 +250,7 @@
             // 
             // btnOpenSalaryForm
             // 
-            this.btnOpenSalaryForm.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnOpenSalaryForm.BackColor = System.Drawing.Color.Black;
             this.btnOpenSalaryForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnOpenSalaryForm.Location = new System.Drawing.Point(38, 460);
             this.btnOpenSalaryForm.Name = "btnOpenSalaryForm";
@@ -262,7 +262,7 @@
             // 
             // listViewEmployees
             // 
-            this.listViewEmployees.BackColor = System.Drawing.Color.Beige;
+            this.listViewEmployees.BackColor = System.Drawing.SystemColors.ControlDark;
             this.listViewEmployees.HideSelection = false;
             this.listViewEmployees.Location = new System.Drawing.Point(310, 128);
             this.listViewEmployees.Name = "listViewEmployees";
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(938, 778);
             this.Controls.Add(this.listViewEmployees);
             this.Controls.Add(this.panel1);
@@ -294,6 +294,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

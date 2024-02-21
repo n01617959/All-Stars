@@ -87,5 +87,18 @@ namespace RestaurantManagementSystem
             report.Show();
             this.Close();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            StaffManagement staffManagementForm;
+            staffManagementForm = new StaffManagement();
+            staffManagementForm.Show();
+            this.Close();
+        }
     }
 }

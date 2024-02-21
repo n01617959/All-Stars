@@ -144,6 +144,7 @@ namespace RestaurantManagementSystem
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             this.Close(); // Close the Salary Form
+            StaffManagement staffManagementForm = new StaffManagement();
             staffManagementForm.Show();
         }
 

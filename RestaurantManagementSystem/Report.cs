@@ -24,7 +24,7 @@ namespace RestaurantManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("not implemented");
         }
 
         private void label3_Click(object sender, EventArgs e)

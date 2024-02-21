@@ -12,6 +12,7 @@ namespace RestaurantManagementSystem
 {
     public partial class inventoryManagement : Form
     {
+        private InventoryDb inventoryDb = new InventoryDb();
         public inventoryManagement()
         {
             InitializeComponent();
@@ -43,9 +44,12 @@ namespace RestaurantManagementSystem
         private void newButton_Click(object sender, EventArgs e)
         {
             if (TryGetInputValues(out int itemID, out string itemName, out int quantity,
-                          out string category, out double price, out string description))
+                              out string category, out double price, out string description))
             {
-                inventoryGridView.Rows.Add(itemID, itemName, quantity, category, price, description);
+                Inventory newInventory = new Inventory(itemID, itemName, quantity, category, price, description);
+                inventoryDb.AddInventory(newInventory);
+
+                UpdateDataGridView();
                 ClearTextBoxes();
             }
         }
@@ -63,12 +67,16 @@ namespace RestaurantManagementSystem
                                       out string category, out double price, out string description))
                 {
                     DataGridViewRow selectedRow = inventoryGridView.CurrentRow;
-                    selectedRow.Cells[0].Value = itemID;
-                    selectedRow.Cells[1].Value = itemName;
-                    selectedRow.Cells[2].Value = quantity;
-                    selectedRow.Cells[3].Value = category;
-                    selectedRow.Cells[4].Value = price;
-                    selectedRow.Cells[5].Value = description;
+
+                    // Create an updated Inventory object
+                    Inventory updatedInventory = new Inventory(itemID, itemName, quantity, category, price, description);
+
+                    // Update the Inventory in the list
+                    inventoryDb.UpdateInventory(updatedInventory);
+
+                    // Update the DataGridView
+                    UpdateDataGridView();
+
                     ClearTextBoxes();
                 }
             }
@@ -82,7 +90,17 @@ namespace RestaurantManagementSystem
         {
             if (inventoryGridView.CurrentRow != null)
             {
-                inventoryGridView.Rows.Remove(inventoryGridView.CurrentRow);
+                int selectedRowIndex = inventoryGridView.CurrentRow.Index;
+
+                // Get the ItemID of the selected row
+                int selectedItemId = (int)inventoryGridView.Rows[selectedRowIndex].Cells[0].Value;
+
+                // Remove the inventory from the list
+                inventoryDb.RemoveInventory(selectedItemId);
+
+                // Update the DataGridView to reflect the changes in the list
+                UpdateDataGridView();
+
                 ClearTextBoxes();
             }
             else
@@ -148,6 +166,35 @@ namespace RestaurantManagementSystem
             categoryTextBox.Text = "";
             priceTextBox.Text = "";
             descriptionTextBox.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateDataGridView()
+        {
+            // Clear existing rows
+            inventoryGridView.Rows.Clear();
+
+            // Add rows based on the current state of the inventory list
+            foreach (Inventory inventoryItem in inventoryDb.GetInventory())
+            {
+                AddInventoryRowToDataGridView(inventoryItem);
+            }
+        }
+
+        private void AddInventoryRowToDataGridView(Inventory inventoryItem)
+        {
+            inventoryGridView.Rows.Add(
+                inventoryItem.ItemID,
+                inventoryItem.ItemName,
+                inventoryItem.Quantity,
+                inventoryItem.Category,
+                inventoryItem.Price,
+                inventoryItem.Description
+            );
         }
     }
 }
