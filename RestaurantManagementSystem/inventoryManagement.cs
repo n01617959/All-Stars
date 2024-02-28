@@ -14,11 +14,13 @@ namespace RestaurantManagementSystem
     {
         private InventoryManager inventoryManager = new InventoryManager();
         private EmployeeBLL employeeBLL; // Add field for EmployeeBLL
+        private bool isAdmin;
 
-        public inventoryManagement()
+        public inventoryManagement(bool isAdmin)
         {
             InitializeComponent();
             InitializeDataGridView();
+            this.isAdmin = isAdmin;
         }
 
         public inventoryManagement(EmployeeBLL employeeBLL)
@@ -47,9 +49,16 @@ namespace RestaurantManagementSystem
             // inventoryManagement inventory = new inventoryManagement(employeeBLL); // Pass the EmployeeBLL parameter
             //inventory.Show();
             //this.Close();
-            Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
-            form2.Show();
-            this.Close();
+            if (isAdmin)
+            {
+                AdminDashboard adminDashboard = new AdminDashboard(employeeBLL);
+                adminDashboard.Show();
+            }
+            else
+            {
+                Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                form2.Show();
+            }
         }
 
         private void inventoryManagement_Load(object sender, EventArgs e)
@@ -189,7 +198,10 @@ namespace RestaurantManagementSystem
             }
         }
 
-       
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

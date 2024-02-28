@@ -6,12 +6,14 @@ namespace RestaurantManagementSystem
     public partial class Form1 : Form
     {
         private readonly UserManager _userManager;
+        private readonly AdminManager _adminManager;
 
         public Form1()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
             _userManager = new UserManager();
+            _adminManager = new AdminManager();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +31,12 @@ namespace RestaurantManagementSystem
                 {
                     EmployeeBLL employeeBLL = new EmployeeBLL(); // Instantiate EmployeeBLL
                     new Form2(employeeBLL).Show(); // Pass EmployeeBLL instance to Form2 constructor
+                    this.Hide();
+                }
+                else if (_adminManager.ValidateUser(username, password))
+                {
+                    EmployeeBLL employeeBLL = new EmployeeBLL();
+                    new AdminDashboard(employeeBLL).Show();
                     this.Hide();
                 }
                 else
@@ -56,6 +64,11 @@ namespace RestaurantManagementSystem
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+                
         }
     }
 }

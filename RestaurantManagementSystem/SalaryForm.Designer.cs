@@ -299,7 +299,7 @@
             this.Name = "SalaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalaryForm";
-           // this.Load += new System.EventHandler(this.SalaryForm_Load);
+            this.Load += new System.EventHandler(this.SalaryForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -14,18 +14,23 @@ namespace RestaurantManagementSystem
     {
         private EmployeeBLL employeeBLL;
         public SalaryForm salaryForm;
-        public StaffManagement(EmployeeBLL employeeBLL)
+        private bool isAdmin;
+        public StaffManagement(EmployeeBLL employeeBLL, bool isAdmin)
         {
             InitializeComponent();
             this.employeeBLL = employeeBLL;
             InitializeListView();
+            this.isAdmin = isAdmin;
         }
 
         private void StaffManagement_Load(object sender, EventArgs e)
         {
-
+            if (employeeBLL != null)
+            {
+                UpdateListView();
+            }
         }
-                private void InitializeListView()
+        private void InitializeListView()
         {
             // Add columns to the ListView
             listViewEmployees.Columns.Add("ID", 60);
@@ -140,16 +145,25 @@ namespace RestaurantManagementSystem
        
         private void btnOpenSalaryForm_Click(object sender, EventArgs e)
         {
-            salaryForm = new SalaryForm(this, employeeBLL); 
+            salaryForm = new SalaryForm(this, employeeBLL,isAdmin); 
             salaryForm.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            salaryForm = new SalaryForm(this, employeeBLL);
-            salaryForm.Show();
-            this.Hide();
+            if (isAdmin)
+            {
+                AdminDashboard adminDashboard = new AdminDashboard(employeeBLL);
+                adminDashboard.Show();
+                this.Hide();
+            }
+            else
+            {
+                Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                form2.Show();
+                this.Hide();
+            }
         }
     }
 }

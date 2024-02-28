@@ -12,9 +12,11 @@ namespace RestaurantManagementSystem
 {
     public partial class Receiptsummarycs : Form
     {
-        public Receiptsummarycs()
+        private bool isAdmin;
+        public Receiptsummarycs(bool isAdmin)
         {
             InitializeComponent();
+            this.isAdmin = isAdmin;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -23,8 +25,13 @@ namespace RestaurantManagementSystem
 
             // Create an instance of Orders and show it
             EmployeeBLL employeeBLL = new EmployeeBLL(); // Create an instance of EmployeeBLL
-            Orders orders = new Orders(employeeBLL); // Pass EmployeeBLL to Orders's constructor
+            Orders orders = new Orders(employeeBLL,isAdmin); // Pass EmployeeBLL to Orders's constructor
             orders.Show();
+        }
+
+        private void Receiptsummarycs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

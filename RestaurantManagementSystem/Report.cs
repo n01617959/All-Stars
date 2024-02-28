@@ -12,9 +12,11 @@ namespace RestaurantManagementSystem
 {
     public partial class Report : Form
     {
-        public Report()
+        private bool isAdmin;
+        public Report(bool isAdmin)
         {
             InitializeComponent();
+            this.isAdmin = isAdmin;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -49,12 +51,23 @@ namespace RestaurantManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            EmployeeBLL employeeBLL = new EmployeeBLL();// Create an instance of EmployeeBLL
+            if (isAdmin)
+            {
+                AdminDashboard adminDashboard = new AdminDashboard(employeeBLL);
+                adminDashboard.Show();
+            }
+            else
+            {
+                Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                form2.Show();
+            }
             this.Close();
+        }
 
-            // Create an instance of Form2 and show it
-            EmployeeBLL employeeBLL = new EmployeeBLL(); // Create an instance of EmployeeBLL
-            Form2 form = new Form2(employeeBLL); // Pass EmployeeBLL to Form2's constructor
-            form.Show();
+        private void Report_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

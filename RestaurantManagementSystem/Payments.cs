@@ -6,11 +6,13 @@ namespace RestaurantManagementSystem
     public partial class Payments : Form
     {
         private EmployeeBLL employeeBLL; // Add EmployeeBLL field
+        private bool isAdmin;
 
-        public Payments(EmployeeBLL employeeBLL) // Pass EmployeeBLL as a parameter in constructor
+        public Payments(EmployeeBLL employeeBLL,bool isAdmin) // Pass EmployeeBLL as a parameter in constructor
         {
             InitializeComponent();
             this.employeeBLL = employeeBLL;
+            this.isAdmin = isAdmin;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -52,9 +54,14 @@ namespace RestaurantManagementSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Receiptsummarycs receiptsummarycs = new Receiptsummarycs();
+            Receiptsummarycs receiptsummarycs = new Receiptsummarycs(isAdmin);
             receiptsummarycs.Show();
             this.Hide();
+        }
+
+        private void Payments_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

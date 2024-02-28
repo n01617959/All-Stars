@@ -13,6 +13,7 @@ namespace RestaurantManagementSystem
     public partial class Form2 : Form
     {
         private EmployeeBLL employeeBLL; // Add EmployeeBLL field
+        private bool isAdmin = false;
 
         public Form2(EmployeeBLL employeeBLL) // Pass EmployeeBLL as a parameter in constructor
         {
@@ -31,7 +32,7 @@ namespace RestaurantManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            inventoryManagement inventory = new inventoryManagement();
+            inventoryManagement inventory = new inventoryManagement(isAdmin);
             inventory.Show();
             this.Close();
         }
@@ -44,21 +45,21 @@ namespace RestaurantManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders(employeeBLL); // Pass employeeBLL to Orders constructor
+            Orders orders = new Orders(employeeBLL,isAdmin); // Pass employeeBLL to Orders constructor
             orders.Show();
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Report report = new Report();
+            Report report = new Report(isAdmin);
             report.Show();
             this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            inventoryManagement inventory = new inventoryManagement();
+            inventoryManagement inventory = new inventoryManagement(isAdmin);
             inventory.Show();
             this.Close();
         }
@@ -70,21 +71,21 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            StaffManagement staffManagementForm = new StaffManagement(employeeBLL); // Pass employeeBLL to StaffManagement constructor
+            StaffManagement staffManagementForm = new StaffManagement(employeeBLL,isAdmin); // Pass employeeBLL to StaffManagement constructor
             staffManagementForm.Show();
             this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders(employeeBLL); // Pass employeeBLL to Orders constructor
+            Orders orders = new Orders(employeeBLL, isAdmin); // Pass employeeBLL to Orders constructor
             orders.Show();
             this.Close();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Report report = new Report();
+            Report report = new Report(isAdmin);
             report.Show();
             this.Close();
         }
@@ -96,7 +97,7 @@ namespace RestaurantManagementSystem
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            StaffManagement staffManagementForm = new StaffManagement(employeeBLL); // Pass employeeBLL to StaffManagement constructor
+            StaffManagement staffManagementForm = new StaffManagement(employeeBLL,isAdmin); // Pass employeeBLL to StaffManagement constructor
             staffManagementForm.Show();
             this.Close();
         }

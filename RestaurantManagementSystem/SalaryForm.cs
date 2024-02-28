@@ -183,13 +183,15 @@ namespace RestaurantManagementSystem
         private readonly StaffManagement staffManagementForm;
         private readonly EmployeeBLL employeeBLL;
         private readonly List<EmployeeSalary> employeeSalaries = new List<EmployeeSalary>();
+        private bool isAdmin;
 
-        public SalaryForm(StaffManagement staffManagementForm, EmployeeBLL employeeBLL)
+        public SalaryForm(StaffManagement staffManagementForm, EmployeeBLL employeeBLL, bool isAdmin)
         {
             InitializeComponent();
             this.staffManagementForm = staffManagementForm;
             this.employeeBLL = employeeBLL;
             InitializeListView();
+            this.isAdmin = isAdmin;
         }
 
         private void InitializeListView()
@@ -312,9 +314,22 @@ namespace RestaurantManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
-            form.Show();
+            if (isAdmin)
+            {
+                AdminDashboard adminDashboard = new AdminDashboard(employeeBLL);
+                adminDashboard.Show();
+            }
+            else
+            {
+                Form2 form = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                form.Show();
+            }
             this.Close();
+        }
+
+        private void SalaryForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

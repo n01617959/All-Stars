@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RestaurantManagementSystem
 {
-    // This class is used to mange user operations
-    public class UserManager
+    public class AdminManager
     {
         private List<User> _validUsers;
 
-        public UserManager()
+        public AdminManager()
         {
             // Initialize the list of valid users
             _validUsers = new List<User>
             {
-                new User { Username = "Allstars", Password = "123" },
+                new User { Username = "Admin", Password = "abc" },
                 // Add more valid users if needed
             };
         }

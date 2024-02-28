@@ -63,6 +63,7 @@
             this.Name = "Receiptsummarycs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receiptsummarycs";
+            this.Load += new System.EventHandler(this.Receiptsummarycs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
