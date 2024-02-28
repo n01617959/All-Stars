@@ -12,10 +12,15 @@ namespace RestaurantManagementSystem
 {
     public partial class inventoryManagement : Form
     {
-        private InventoryDb inventoryDb = new InventoryDb();
+        private InventoryManager inventoryManager = new InventoryManager();
         public inventoryManagement()
         {
             InitializeComponent();
+            InitializeDataGridViewColumns();
+        }
+
+        private void InitializeDataGridViewColumns()
+        {
             inventoryGridView.Columns.Add("ItemID", "Item ID");
             inventoryGridView.Columns.Add("ItemName", "Item Name");
             inventoryGridView.Columns.Add("Quantity", "Quantity");
@@ -44,10 +49,10 @@ namespace RestaurantManagementSystem
         private void newButton_Click(object sender, EventArgs e)
         {
             if (TryGetInputValues(out int itemID, out string itemName, out int quantity,
-                              out string category, out double price, out string description))
+                                   out string category, out decimal price, out string description))
             {
                 Inventory newInventory = new Inventory(itemID, itemName, quantity, category, price, description);
-                inventoryDb.AddInventory(newInventory);
+                inventoryManager.AddInventory(newInventory);
 
                 UpdateDataGridView();
                 ClearTextBoxes();
@@ -61,29 +66,20 @@ namespace RestaurantManagementSystem
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            if (inventoryGridView.CurrentRow != null)
+            if (inventoryGridView.CurrentRow != null && TryGetInputValues(out int itemID, out string itemName, out int quantity,
+                                  out string category, out decimal price, out string description))
             {
-                if (TryGetInputValues(out int itemID, out string itemName, out int quantity,
-                                      out string category, out double price, out string description))
-                {
-                    DataGridViewRow selectedRow = inventoryGridView.CurrentRow;
+                Inventory updatedInventory = new Inventory(itemID, itemName, quantity, category, price, description);
+                inventoryManager.UpdateInventory(updatedInventory);
 
-                    // Create an updated Inventory object
-                    Inventory updatedInventory = new Inventory(itemID, itemName, quantity, category, price, description);
-
-                    // Update the Inventory in the list
-                    inventoryDb.UpdateInventory(updatedInventory);
-
-                    // Update the DataGridView
-                    UpdateDataGridView();
-
-                    ClearTextBoxes();
-                }
+                UpdateDataGridView();
+                ClearTextBoxes();
             }
             else
             {
-                MessageBox.Show("Please select a row to update");
+                MessageBox.Show("Please select a row to update.");
             }
+
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -91,72 +87,71 @@ namespace RestaurantManagementSystem
             if (inventoryGridView.CurrentRow != null)
             {
                 int selectedRowIndex = inventoryGridView.CurrentRow.Index;
+                int itemID = Convert.ToInt32(inventoryGridView.Rows[selectedRowIndex].Cells["ItemID"].Value);
+                inventoryManager.RemoveInventory(itemID);
 
-                // Get the ItemID of the selected row
-                int selectedItemId = (int)inventoryGridView.Rows[selectedRowIndex].Cells[0].Value;
-
-                // Remove the inventory from the list
-                inventoryDb.RemoveInventory(selectedItemId);
-
-                // Update the DataGridView to reflect the changes in the list
                 UpdateDataGridView();
-
-                ClearTextBoxes();
             }
             else
             {
-                MessageBox.Show("Please select a row to delete");
+                MessageBox.Show("Please select a row to delete.");
             }
         }
 
         private bool TryGetInputValues(out int itemID, out string itemName, out int quantity,
-                               out string category, out double price, out string description)
+                                 out string category, out decimal price, out string description)
         {
             itemID = 0;
-            itemName = itemNameTextBox.Text;
+            itemName = itemNameTextBox.Text.Trim();
             quantity = 0;
-            category = categoryTextBox.Text;
-            price = 0;
-            description = descriptionTextBox.Text;
+            category = categoryTextBox.Text.Trim();
+            price = 0m;
+            description = descriptionTextBox.Text.Trim();
 
-            if (int.TryParse(itemIDTextBox.Text, out int parsedItemID))
+            // Validate Item ID
+            bool isItemIdValid = int.TryParse(itemIDTextBox.Text.Trim(), out itemID);
+            if (!isItemIdValid || itemID < 0)
             {
-                itemID = parsedItemID;
-            }
-            else
-            {
-                MessageBox.Show("Invalid Item ID. Please enter a valid integer.");
+                MessageBox.Show("Invalid Item ID. Please enter a positive number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (int.TryParse(quantityTextBox.Text, out int parsedQuantity))
+            // Validate Item Name
+            if (string.IsNullOrEmpty(itemName))
             {
-                quantity = parsedQuantity;
-            }
-            else
-            {
-                MessageBox.Show("Invalid Quantity. Please enter a valid integer.");
+                MessageBox.Show("Item Name is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (double.TryParse(priceTextBox.Text, out double parsedPrice))
+            // Validate Quantity
+            bool isQuantityValid = int.TryParse(quantityTextBox.Text.Trim(), out quantity);
+            if (!isQuantityValid || quantity < 0)
             {
-                price = parsedPrice;
-            }
-            else
-            {
-                MessageBox.Show("Invalid Price. Please enter a valid number.");
+                MessageBox.Show("Invalid Quantity. Please enter a non-negative number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (itemID == 0 || itemName == "" || quantity == 0 || category == "" || price == 0 || description == "")
+            // Validate Category
+            if (string.IsNullOrEmpty(category))
             {
-                MessageBox.Show("Please fill all the fields");
+                MessageBox.Show("Category is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            return true;
+            // Validate Price
+            bool isPriceValid = decimal.TryParse(priceTextBox.Text.Trim(), out price);
+            if (!isPriceValid || price < 0)
+            {
+                MessageBox.Show("Invalid Price. Please enter a non-negative value.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Description is optional and requires no validation
+
+            return true; // All inputs are valid
         }
+
+
 
         private void ClearTextBoxes()
         {
@@ -175,26 +170,16 @@ namespace RestaurantManagementSystem
 
         private void UpdateDataGridView()
         {
-            // Clear existing rows
             inventoryGridView.Rows.Clear();
-
-            // Add rows based on the current state of the inventory list
-            foreach (Inventory inventoryItem in inventoryDb.GetInventory())
+            foreach (Inventory inventoryItem in inventoryManager.GetInventory())
             {
-                AddInventoryRowToDataGridView(inventoryItem);
+                inventoryGridView.Rows.Add(inventoryItem.ItemID, inventoryItem.ItemName, inventoryItem.Quantity,
+                                           inventoryItem.Category, inventoryItem.Price, inventoryItem.Description);
             }
         }
 
-        private void AddInventoryRowToDataGridView(Inventory inventoryItem)
-        {
-            inventoryGridView.Rows.Add(
-                inventoryItem.ItemID,
-                inventoryItem.ItemName,
-                inventoryItem.Quantity,
-                inventoryItem.Category,
-                inventoryItem.Price,
-                inventoryItem.Description
-            );
-        }
+       
     }
 }
+
+

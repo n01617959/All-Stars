@@ -1,60 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RestaurantManagementSystem
 {
-    internal class InventoryDb
+    public class InventoryDb
     {
-        List<Inventory> inventoryList = new List<Inventory>();
+        private List<Inventory> _inventory;
+
+        public InventoryDb()
+        {
+            _inventory = new List<Inventory>();
+        }
 
         public void AddInventory(Inventory inventory)
         {
-            inventoryList.Add(inventory);
+            _inventory.Add(inventory);
         }
-        public void RemoveInventory(int itemID)
-        {
-            Inventory inventoryToRemove = inventoryList.Find(i => i.ItemID == itemID);
 
-            if (inventoryToRemove != null)
+        public void UpdateInventory(Inventory inventory)
+        {
+            var existingInventory = _inventory.Find(i => i.ItemID == inventory.ItemID);
+            if (existingInventory != null)
             {
-                inventoryList.Remove(inventoryToRemove);
+                existingInventory.ItemName = inventory.ItemName;
+                existingInventory.Quantity = inventory.Quantity;
+                existingInventory.Category = inventory.Category;
+                existingInventory.Price = inventory.Price;
+                existingInventory.Description = inventory.Description;
             }
             else
             {
-                // Handle the case where the inventory with the specified ItemID is not found
-               MessageBox.Show("Inventory not found for removal.");
+                throw new InvalidOperationException("Inventory item not found for update.");
+            }
+        }
+
+        public void RemoveInventory(int itemID)
+        {
+            var inventoryToRemove = _inventory.Find(i => i.ItemID == itemID);
+            if (inventoryToRemove != null)
+            {
+                _inventory.Remove(inventoryToRemove);
+            }
+            else
+            {
+                throw new InvalidOperationException("Inventory item not found for removal.");
             }
         }
 
         public List<Inventory> GetInventory()
         {
-            return inventoryList;
+            return _inventory;
         }
-
-        public void UpdateInventory(Inventory updatedInventory)
-        {
-            int index = inventoryList.FindIndex(i => i.ItemID == updatedInventory.ItemID);
-
-            if (index != -1)
-            {
-                // Update the inventory at the found index
-                inventoryList[index] = updatedInventory;
-            }
-            else
-            {
-                // Handle the case where the inventory with the specified ItemID is not found
-                MessageBox.Show("Inventory not found for update.");
-            }
-        }
-
-        public Inventory GetInventory(int itemID)
-        {
-            return inventoryList.Find(i => i.ItemID == itemID);
-        }
-
     }
 }

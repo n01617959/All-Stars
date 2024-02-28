@@ -12,3 +12,6 @@ RestaurantManagementSystem/obj/Debug/RestaurantManagementSystem.csproj.GenerateR
 *.vsidx
 .vs/RestaurantManagementSystem/FileContentIndex/dbaca728-37c3-4c6c-afc8-55b0bce58433.vsidx
 .vs/RestaurantManagementSystem/FileContentIndex/dbaca728-37c3-4c6c-afc8-55b0bce58433.vsidx
+.vs/RestaurantManagementSystem/v17/.suo
+*.pdb
+RestaurantManagementSystem/obj/Debug/RestaurantManagementSystem.pdb
