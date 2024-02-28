@@ -50,9 +50,11 @@ namespace RestaurantManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form2 form  = new Form2();
+
+            // Create an instance of Form2 and show it
+            EmployeeBLL employeeBLL = new EmployeeBLL(); // Create an instance of EmployeeBLL
+            Form2 form = new Form2(employeeBLL); // Pass EmployeeBLL to Form2's constructor
             form.Show();
-            this.Close();
         }
     }
 }

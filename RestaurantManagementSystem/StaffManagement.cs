@@ -12,14 +12,12 @@ namespace RestaurantManagementSystem
 {
     public partial class StaffManagement : Form
     {
-
-        private List<Employee> employees = new List<Employee>();
-        private SalaryForm salaryForm;
-        public StaffManagement()
+        private EmployeeBLL employeeBLL;
+        public SalaryForm salaryForm;
+        public StaffManagement(EmployeeBLL employeeBLL)
         {
             InitializeComponent();
-            salaryForm = new SalaryForm(this);
-            //    dashboardForm = new DashboardForm(); 
+            this.employeeBLL = employeeBLL;
             InitializeListView();
         }
 
@@ -36,6 +34,7 @@ namespace RestaurantManagementSystem
             listViewEmployees.Columns.Add("Contact Number", 150);
             listViewEmployees.Columns.Add("Position", 70);
             listViewEmployees.FullRowSelect = true;
+            UpdateListView();
         }
 
 
@@ -55,17 +54,14 @@ namespace RestaurantManagementSystem
                 string contactNumber = txtContact.Text;
                 string position = txtPosition.Text;
 
-                // Check for unique ID
-                if (employees.Exists(emp => emp.ID == id))
+                if (employeeBLL.EmployeeExists(id))
                 {
                     MessageBox.Show("Employee with the same ID already exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Add new employee
-                employees.Add(new Employee(id, name, gender, contactNumber, position));
+                employeeBLL.AddEmployee(id, name, gender, contactNumber, position);
                 UpdateListView();
-                //ClearFields();
             }
             catch (FormatException)
             {
@@ -75,13 +71,12 @@ namespace RestaurantManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // Delete Employee
             if (listViewEmployees.SelectedItems.Count > 0)
             {
                 foreach (ListViewItem item in listViewEmployees.SelectedItems)
                 {
                     int id = int.Parse(item.SubItems[0].Text);
-                    employees.RemoveAll(emp => emp.ID == id);
+                    employeeBLL.DeleteEmployee(id);
                 }
                 UpdateListView();
             }
@@ -91,24 +86,23 @@ namespace RestaurantManagementSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // Update Employee
             if (listViewEmployees.SelectedItems.Count > 0)
             {
                 try
                 {
                     int selectedIndex = listViewEmployees.SelectedIndices[0];
-                    Employee selectedEmployee = employees[selectedIndex];
+                    Employee selectedEmployee = employeeBLL.GetEmployeeByID(selectedIndex);
                     selectedEmployee.Name = TxtName.Text;
                     selectedEmployee.Gender = cmbGender.SelectedItem.ToString();
                     selectedEmployee.ContactNumber = txtContact.Text;
                     selectedEmployee.Position = txtPosition.Text;
+                    employeeBLL.UpdateEmployee(selectedEmployee);
                     UpdateListView();
                 }
                 catch
                 {
                     MessageBox.Show("Please Enter all fields");
                 }
-               
             }
             else
                 MessageBox.Show("Please select an item!");
@@ -122,6 +116,7 @@ namespace RestaurantManagementSystem
         private void UpdateListView()
         {
             listViewEmployees.Items.Clear();
+            List<Employee> employees = employeeBLL.GetAllEmployees();
             foreach (Employee emp in employees)
             {
                 ListViewItem item = new ListViewItem(emp.ID.ToString());
@@ -142,26 +137,19 @@ namespace RestaurantManagementSystem
             txtPosition.Text = "";
         }
 
-        public List<Employee> GetEmployees()
-        {
-            return employees;
-        }
-
+       
         private void btnOpenSalaryForm_Click(object sender, EventArgs e)
         {
-            if (salaryForm == null || salaryForm.IsDisposed)
-            {
-                salaryForm = new SalaryForm(this);
-            }
+            salaryForm = new SalaryForm(this, employeeBLL); 
             salaryForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
-            form.Show();
-            this.Close();
+            salaryForm = new SalaryForm(this, employeeBLL);
+            salaryForm.Show();
+            this.Hide();
         }
     }
 }

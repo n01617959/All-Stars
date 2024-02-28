@@ -13,13 +13,21 @@ namespace RestaurantManagementSystem
     public partial class inventoryManagement : Form
     {
         private InventoryManager inventoryManager = new InventoryManager();
+        private EmployeeBLL employeeBLL; // Add field for EmployeeBLL
+
         public inventoryManagement()
         {
             InitializeComponent();
-            InitializeDataGridViewColumns();
+            InitializeDataGridView();
         }
 
-        private void InitializeDataGridViewColumns()
+        public inventoryManagement(EmployeeBLL employeeBLL)
+        {
+            InitializeComponent();
+            this.employeeBLL = employeeBLL;
+            InitializeDataGridView();
+        }
+        private void InitializeDataGridView()
         {
             inventoryGridView.Columns.Add("ItemID", "Item ID");
             inventoryGridView.Columns.Add("ItemName", "Item Name");
@@ -36,8 +44,11 @@ namespace RestaurantManagementSystem
 
         private void label8_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
-            form.Show();
+            // inventoryManagement inventory = new inventoryManagement(employeeBLL); // Pass the EmployeeBLL parameter
+            //inventory.Show();
+            //this.Close();
+            Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+            form2.Show();
             this.Close();
         }
 

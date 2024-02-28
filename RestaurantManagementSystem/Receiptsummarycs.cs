@@ -19,9 +19,12 @@ namespace RestaurantManagementSystem
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders();
+            this.Close();
+
+            // Create an instance of Orders and show it
+            EmployeeBLL employeeBLL = new EmployeeBLL(); // Create an instance of EmployeeBLL
+            Orders orders = new Orders(employeeBLL); // Pass EmployeeBLL to Orders's constructor
             orders.Show();
-            this.Hide();
         }
     }
 }

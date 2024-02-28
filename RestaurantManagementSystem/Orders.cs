@@ -12,19 +12,22 @@ namespace RestaurantManagementSystem
 {
     public partial class Orders : Form
     {
-        public Orders()
+        private EmployeeBLL employeeBLL; // Add field for EmployeeBLL
+
+        public Orders(EmployeeBLL employeeBLL) // Constructor to accept EmployeeBLL
         {
             InitializeComponent();
+            this.employeeBLL = employeeBLL; // Assign the passed EmployeeBLL to the field
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments();
+            Payments payments = new Payments(employeeBLL); // Pass the EmployeeBLL parameter
             payments.Show();
             this.Hide();
         }
@@ -58,7 +61,7 @@ namespace RestaurantManagementSystem
 
         private void label14_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            Form2 form = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
             form.Show();
             this.Close();
         }

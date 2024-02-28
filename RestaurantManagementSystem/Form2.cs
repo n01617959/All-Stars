@@ -12,9 +12,12 @@ namespace RestaurantManagementSystem
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private EmployeeBLL employeeBLL; // Add EmployeeBLL field
+
+        public Form2(EmployeeBLL employeeBLL) // Pass EmployeeBLL as a parameter in constructor
         {
             InitializeComponent();
+            this.employeeBLL = employeeBLL;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -35,14 +38,13 @@ namespace RestaurantManagementSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(employeeBLL);
             form2.Show();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders();
+            Orders orders = new Orders(employeeBLL); // Pass employeeBLL to Orders constructor
             orders.Show();
             this.Close();
         }
@@ -68,15 +70,14 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            StaffManagement staffManagementForm;
-            staffManagementForm = new StaffManagement();
+            StaffManagement staffManagementForm = new StaffManagement(employeeBLL); // Pass employeeBLL to StaffManagement constructor
             staffManagementForm.Show();
             this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders();
+            Orders orders = new Orders(employeeBLL); // Pass employeeBLL to Orders constructor
             orders.Show();
             this.Close();
         }
@@ -95,8 +96,7 @@ namespace RestaurantManagementSystem
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            StaffManagement staffManagementForm;
-            staffManagementForm = new StaffManagement();
+            StaffManagement staffManagementForm = new StaffManagement(employeeBLL); // Pass employeeBLL to StaffManagement constructor
             staffManagementForm.Show();
             this.Close();
         }
