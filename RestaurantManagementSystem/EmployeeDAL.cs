@@ -18,7 +18,14 @@ namespace RestaurantManagementSystem
 
         public bool EmployeeExists(int id)
         {
-            return employees.Exists(emp => emp.ID == id);
+            foreach (var emp in employees)
+            {
+                if (emp.ID == id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void AddEmployee(int id, string name, string gender, string contactNumber, string position)
@@ -28,15 +35,25 @@ namespace RestaurantManagementSystem
 
         public void DeleteEmployee(int id)
         {
-            employees.RemoveAll(emp => emp.ID == id);
+            for (int i = 0; i < employees.Count; i++)
+            {
+                if (employees[i].ID == id)
+                {
+                    employees.RemoveAt(i);
+                    return;
+                }
+            }
         }
 
         public void UpdateEmployee(Employee updatedEmployee)
         {
-            int index = employees.FindIndex(emp => emp.ID == updatedEmployee.ID);
-            if (index != -1)
+            for (int i = 0; i < employees.Count; i++)
             {
-                employees[index] = updatedEmployee;
+                if (employees[i].ID == updatedEmployee.ID)
+                {
+                    employees[i] = updatedEmployee;
+                    return;
+                }
             }
         }
 
@@ -47,7 +64,14 @@ namespace RestaurantManagementSystem
 
         public Employee GetEmployeeByID(int id)
         {
-            return employees.Find(emp => emp.ID == id);
+            foreach (var emp in employees)
+            {
+                if (emp.ID == id)
+                {
+                    return emp;
+                }
+            }
+            return null;
         }
     }
 }
