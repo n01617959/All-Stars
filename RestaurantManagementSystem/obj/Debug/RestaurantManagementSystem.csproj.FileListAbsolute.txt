@@ -66,3 +66,21 @@ C:\Users\HP\source\repos\All-Stars\RestaurantManagementSystem\obj\Debug\Restaura
 C:\Users\HP\source\repos\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
 C:\Users\HP\source\repos\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe.config
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.exe
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\bin\Debug\RestaurantManagementSystem.pdb
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.AssemblyReference.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form1.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Form2.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Orders.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.inventoryManagement.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Payments.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Properties.Resources.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Receiptsummarycs.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.Report.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.SalaryForm.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.StaffManagement.resources
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.GenerateResource.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
