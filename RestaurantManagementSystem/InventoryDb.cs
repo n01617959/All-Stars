@@ -19,7 +19,18 @@ namespace RestaurantManagementSystem
 
         public void UpdateInventory(Inventory inventory)
         {
-            var existingInventory = _inventory.Find(i => i.ItemID == inventory.ItemID);
+            Inventory existingInventory = null;
+
+            // Manually search for the inventory item
+            foreach (var item in _inventory)
+            {
+                if (item.ItemID == inventory.ItemID)
+                {
+                    existingInventory = item;
+                    break; // Exit the loop once the item is found
+                }
+            }
+
             if (existingInventory != null)
             {
                 existingInventory.ItemName = inventory.ItemName;
@@ -34,9 +45,21 @@ namespace RestaurantManagementSystem
             }
         }
 
+
         public void RemoveInventory(int itemID)
         {
-            var inventoryToRemove = _inventory.Find(i => i.ItemID == itemID);
+            Inventory inventoryToRemove = null;
+
+            // Manually search for the inventory item to remove
+            foreach (var item in _inventory)
+            {
+                if (item.ItemID == itemID)
+                {
+                    inventoryToRemove = item;
+                    break; 
+                }
+            }
+
             if (inventoryToRemove != null)
             {
                 _inventory.Remove(inventoryToRemove);
@@ -46,6 +69,7 @@ namespace RestaurantManagementSystem
                 throw new InvalidOperationException("Inventory item not found for removal.");
             }
         }
+
 
         public List<Inventory> GetInventory()
         {
