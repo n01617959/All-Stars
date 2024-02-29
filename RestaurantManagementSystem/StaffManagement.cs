@@ -32,7 +32,6 @@ namespace RestaurantManagementSystem
         }
         private void InitializeListView()
         {
-            // Add columns to the ListView
             listViewEmployees.Columns.Add("ID", 60);
             listViewEmployees.Columns.Add("Name", 150);
             listViewEmployees.Columns.Add("Gender", 65);
@@ -50,7 +49,6 @@ namespace RestaurantManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // Add Employee
             try
             {
                 int id = int.Parse(textID.Text);
@@ -58,6 +56,19 @@ namespace RestaurantManagementSystem
                 string gender = cmbGender.SelectedItem.ToString();
                 string contactNumber = txtContact.Text;
                 string position = txtPosition.Text;
+                if(string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(gender) ||
+                    string.IsNullOrWhiteSpace(contactNumber) ||
+                    string.IsNullOrWhiteSpace(position))
+                {
+                    MessageBox.Show("Please enter information in all textboxes!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if(!employeeBLL.isContactValid(contactNumber))
+                {
+                    MessageBox.Show("Please enter numbers between 0-9", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
 
                 if (employeeBLL.EmployeeExists(id))
                 {
@@ -96,10 +107,11 @@ namespace RestaurantManagementSystem
                 try
                 {
                     int selectedIndex = listViewEmployees.SelectedIndices[0];
-                    Employee selectedEmployee = employeeBLL.GetEmployeeByID(selectedIndex);
+                    Employee selectedEmployee = employeeBLL.GetEmployeeByID(selectedIndex + 1);
                     selectedEmployee.Name = TxtName.Text;
                     selectedEmployee.Gender = cmbGender.SelectedItem.ToString();
-                    selectedEmployee.ContactNumber = txtContact.Text;
+                    selectedEmployee.ContactNumber =  employeeBLL.isContactValid(txtContact.Text)?
+                        txtContact.Text : selectedEmployee.ContactNumber;
                     selectedEmployee.Position = txtPosition.Text;
                     employeeBLL.UpdateEmployee(selectedEmployee);
                     UpdateListView();
@@ -148,6 +160,7 @@ namespace RestaurantManagementSystem
             salaryForm = new SalaryForm(this, employeeBLL,isAdmin); 
             salaryForm.Show();
             this.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,7 +173,7 @@ namespace RestaurantManagementSystem
             }
             else
             {
-                Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                Form2 form2 = new Form2(employeeBLL); 
                 form2.Show();
                 this.Hide();
             }

@@ -9,11 +9,11 @@ namespace RestaurantManagementSystem
     public class EmployeeDAL
     {
         private List<Employee> employees;
+        public static List<Employee> Employees = new List<Employee>();
 
         public EmployeeDAL()
         {
-            employees = new List<Employee>();
-            // You may initialize or load data from a database or other storage here.
+            employees = Employees;
         }
 
         public bool EmployeeExists(int id)

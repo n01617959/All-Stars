@@ -8,7 +8,7 @@ namespace RestaurantManagementSystem
 {
     public class EmployeeSalary
     {
-        public int EmployeeID { get; }
+        public int EmployeeID { get; set; }
         public double Salary { get; set; }
         public DateTime PaymentDate { get; set; }
         public double TaxPercentage { get; set; }
@@ -20,6 +20,7 @@ namespace RestaurantManagementSystem
             PaymentDate = paymentDate;
             TaxPercentage = taxPercentage;
         }
+        public EmployeeSalary() { }
 
         public override string ToString()
         {

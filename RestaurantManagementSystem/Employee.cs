@@ -14,6 +14,9 @@ namespace RestaurantManagementSystem
         public string ContactNumber { get; set; }
         public string Position { get; set; }
 
+        public  List<EmployeeSalary> employeeSalaries = new List<EmployeeSalary>();
+
+
         public Employee(int id, string name, string gender, string contactNumber, string position)
         {
             ID = id;

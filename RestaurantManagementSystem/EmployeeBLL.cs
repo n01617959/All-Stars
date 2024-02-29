@@ -44,5 +44,21 @@ namespace RestaurantManagementSystem
         {
             return employeeDAL.GetEmployeeByID(id);
         }
+
+        public bool isContactValid(string contact)
+        {
+            int number;
+            bool isNumber = int.TryParse(contact, out number);
+
+            if (isNumber)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
     }
 }
