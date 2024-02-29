@@ -58,7 +58,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Restaurant Inventory System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+           // this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // inventoryGridView
             // 
@@ -70,7 +70,7 @@
             this.inventoryGridView.RowTemplate.Height = 24;
             this.inventoryGridView.Size = new System.Drawing.Size(821, 236);
             this.inventoryGridView.TabIndex = 1;
-            this.inventoryGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryGridView_CellContentClick);
+            //this.inventoryGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryGridView_CellContentClick);
             // 
             // newButton
             // 
@@ -154,7 +154,7 @@
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(187, 22);
             this.descriptionTextBox.TabIndex = 11;
-            this.descriptionTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            //this.descriptionTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label2
             // 
@@ -255,7 +255,7 @@
             this.Name = "inventoryManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management Section";
-            this.Load += new System.EventHandler(this.inventoryManagement_Load);
+           // this.Load += new System.EventHandler(this.inventoryManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

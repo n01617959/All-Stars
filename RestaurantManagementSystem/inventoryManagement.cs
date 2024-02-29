@@ -29,6 +29,7 @@ namespace RestaurantManagementSystem
             this.employeeBLL = employeeBLL;
             InitializeDataGridView();
         }
+
         private void InitializeDataGridView()
         {
             inventoryGridView.Columns.Add("ItemID", "Item ID");
@@ -37,18 +38,27 @@ namespace RestaurantManagementSystem
             inventoryGridView.Columns.Add("Category", "Category");
             inventoryGridView.Columns.Add("Price", "Price");
             inventoryGridView.Columns.Add("Description", "Description");
+
+            // Handle cell click event to populate selected row in text fields
+            inventoryGridView.CellClick += InventoryGridView_CellClick;
         }
 
-        private void inventoryGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void InventoryGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0 && e.RowIndex < inventoryGridView.Rows.Count)
+            {
+                DataGridViewRow row = inventoryGridView.Rows[e.RowIndex];
+                itemIDTextBox.Text = row.Cells["ItemID"].Value.ToString();
+                itemNameTextBox.Text = row.Cells["ItemName"].Value.ToString();
+                quantityTextBox.Text = row.Cells["Quantity"].Value.ToString();
+                categoryTextBox.Text = row.Cells["Category"].Value.ToString();
+                priceTextBox.Text = row.Cells["Price"].Value.ToString();
+                descriptionTextBox.Text = row.Cells["Description"].Value.ToString();
+            }
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-            // inventoryManagement inventory = new inventoryManagement(employeeBLL); // Pass the EmployeeBLL parameter
-            //inventory.Show();
-            //this.Close();
             if (isAdmin)
             {
                 AdminDashboard adminDashboard = new AdminDashboard(employeeBLL);
@@ -56,14 +66,9 @@ namespace RestaurantManagementSystem
             }
             else
             {
-                Form2 form2 = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
+                Form2 form2 = new Form2(employeeBLL);
                 form2.Show();
             }
-        }
-
-        private void inventoryManagement_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -77,11 +82,6 @@ namespace RestaurantManagementSystem
                 UpdateDataGridView();
                 ClearTextBoxes();
             }
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -99,7 +99,6 @@ namespace RestaurantManagementSystem
             {
                 MessageBox.Show("Please select a row to update.");
             }
-
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -111,6 +110,7 @@ namespace RestaurantManagementSystem
                 inventoryManager.RemoveInventory(itemID);
 
                 UpdateDataGridView();
+                ClearTextBoxes();
             }
             else
             {
@@ -171,8 +171,6 @@ namespace RestaurantManagementSystem
             return true; // All inputs are valid
         }
 
-
-
         private void ClearTextBoxes()
         {
             itemIDTextBox.Text = "";
@@ -181,11 +179,6 @@ namespace RestaurantManagementSystem
             categoryTextBox.Text = "";
             priceTextBox.Text = "";
             descriptionTextBox.Text = "";
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void UpdateDataGridView()
@@ -197,12 +190,5 @@ namespace RestaurantManagementSystem
                                            inventoryItem.Category, inventoryItem.Price, inventoryItem.Description);
             }
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-
-

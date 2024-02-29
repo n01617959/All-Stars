@@ -41,10 +41,10 @@ namespace RestaurantManagementSystem
             }
             else
             {
-                throw new InvalidOperationException("Inventory item not found for update.");
+                // Display error message using MessageBox
+                System.Windows.Forms.MessageBox.Show("Inventory item not found for update.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-
 
         public void RemoveInventory(int itemID)
         {
@@ -56,7 +56,7 @@ namespace RestaurantManagementSystem
                 if (item.ItemID == itemID)
                 {
                     inventoryToRemove = item;
-                    break; 
+                    break;
                 }
             }
 
@@ -66,14 +66,16 @@ namespace RestaurantManagementSystem
             }
             else
             {
-                throw new InvalidOperationException("Inventory item not found for removal.");
+                System.Windows.Forms.MessageBox.Show("Inventory item not found for Delete.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-
 
         public List<Inventory> GetInventory()
         {
             return _inventory;
         }
+
+
+
     }
 }

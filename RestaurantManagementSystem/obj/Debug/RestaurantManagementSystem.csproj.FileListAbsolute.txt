@@ -104,3 +104,4 @@ D:\final2\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSys
 D:\final2\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.CoreCompileInputs.cache
 D:\final2\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
 D:\final2\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
+C:\Users\siddh\OneDrive - Humber College\Documents\windowsAppDev\All_stars_Final\All-Stars\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.AdminDashboard.resources

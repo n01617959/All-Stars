@@ -13,7 +13,6 @@ namespace RestaurantManagementSystem
 
 
 
-        // Constructor for convenience
         public Inventory(int itemId, string itemName, int quantity, string category, decimal price, string description)
         {
             ItemID = itemId;
