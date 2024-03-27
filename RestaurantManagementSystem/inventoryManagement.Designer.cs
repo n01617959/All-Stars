@@ -249,6 +249,7 @@
             this.Name = "inventoryManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management Section";
+            this.Load += new System.EventHandler(this.inventoryManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,5 +277,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+
     }
 }

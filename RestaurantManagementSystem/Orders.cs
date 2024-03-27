@@ -94,6 +94,7 @@ namespace RestaurantManagementSystem
         private void Orders_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void add_items_Click(object sender, EventArgs e)
@@ -118,6 +119,12 @@ namespace RestaurantManagementSystem
 
         private void dataGridView_selectedItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
 
         }
     }

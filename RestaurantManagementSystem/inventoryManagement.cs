@@ -195,5 +195,10 @@ namespace RestaurantManagementSystem
         {
 
         }
+
+        private void inventoryManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
