@@ -5,15 +5,18 @@ namespace RestaurantManagementSystem
 {
     public partial class Form1 : Form
     {
-        private readonly UserManager _userManager;
-        private readonly AdminManager _adminManager;
+        private readonly DatabaseManager _databaseManager;
+        private readonly EmployeeBLL _employeeBLL; // Add this line
 
         public Form1()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
-            _userManager = new UserManager();
-            _adminManager = new AdminManager();
+            _databaseManager = new DatabaseManager("Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;TrustServerCertificate=true;");
+            _databaseManager.ConnectToDatabase();
+
+            // Instantiate EmployeeBLL
+            _employeeBLL = new EmployeeBLL(); // Instantiate as needed, pass necessary parameters if any
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,16 +30,30 @@ namespace RestaurantManagementSystem
             }
             else
             {
-                if (_userManager.ValidateUser(username, password))
+                UserType userType = _databaseManager.ValidateCredentials(username, password);
+
+                if (userType != UserType.None)
                 {
-                    EmployeeBLL employeeBLL = new EmployeeBLL(); // Instantiate EmployeeBLL
-                    new Form2(employeeBLL).Show(); // Pass EmployeeBLL instance to Form2 constructor
-                    this.Hide();
-                }
-                else if (_adminManager.ValidateUser(username, password))
-                {
-                    EmployeeBLL employeeBLL = new EmployeeBLL();
-                    new AdminDashboard(employeeBLL).Show();
+                    // Assuming StoreLogin just logs the attempt and always returns true for this example
+                    _databaseManager.StoreLogin(username, password);
+
+                    MessageBox.Show("Login Successful!");
+
+                    // Open respective forms based on user type
+                    if (userType == UserType.User)
+                    {
+                        // Open Orders form
+                        Orders ordersForm = new Orders(_employeeBLL, false); // Assuming isAdmin parameter is false for regular users
+                        ordersForm.Show();
+                        MessageBox.Show("Welcome, User!");
+                    }
+                    else if (userType == UserType.Admin)
+                    {
+                        // Open AdminDashboard form
+                        AdminDashboard adminDashboardForm = new AdminDashboard(_employeeBLL); // Assuming there's only one admin, so isAdmin parameter is not needed
+                        adminDashboardForm.Show();
+                        MessageBox.Show("Welcome, Admin!");
+                    }
                     this.Hide();
                 }
                 else
@@ -59,16 +76,6 @@ namespace RestaurantManagementSystem
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-                
         }
     }
 }

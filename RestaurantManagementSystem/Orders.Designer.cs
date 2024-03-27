@@ -53,15 +53,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.add_items = new System.Windows.Forms.Button();
+            this.dataGridView_selectedItems = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedItems)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,17 +259,16 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(547, 47);
+            this.panel4.Location = new System.Drawing.Point(691, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(419, 735);
+            this.panel4.Size = new System.Drawing.Size(275, 735);
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(78, 690);
+            this.button3.Location = new System.Drawing.Point(15, 340);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(247, 32);
             this.button3.TabIndex = 8;
@@ -278,7 +278,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 641);
+            this.textBox3.Location = new System.Drawing.Point(141, 275);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 22);
@@ -287,7 +287,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 641);
+            this.label8.Location = new System.Drawing.Point(35, 281);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 6;
@@ -295,7 +295,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 603);
+            this.textBox2.Location = new System.Drawing.Point(141, 210);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 22);
@@ -304,7 +304,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 603);
+            this.label7.Location = new System.Drawing.Point(35, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 4;
@@ -313,7 +313,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 569);
+            this.label6.Location = new System.Drawing.Point(35, 144);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 3;
@@ -321,7 +321,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 563);
+            this.textBox1.Location = new System.Drawing.Point(141, 138);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 22);
@@ -337,28 +337,10 @@
             this.label4.Text = "Order Summary";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(380, 382);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(218, 115);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(304, 310);
-            this.checkedListBox1.TabIndex = 5;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(218, 531);
+            this.button1.Location = new System.Drawing.Point(206, 651);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 34);
             this.button1.TabIndex = 6;
@@ -369,7 +351,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(385, 531);
+            this.button2.Location = new System.Drawing.Point(363, 651);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 34);
             this.button2.TabIndex = 7;
@@ -387,16 +369,50 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Selected Items";
             // 
+            // add_items
+            // 
+            this.add_items.Location = new System.Drawing.Point(406, 107);
+            this.add_items.Name = "add_items";
+            this.add_items.Size = new System.Drawing.Size(75, 23);
+            this.add_items.TabIndex = 10;
+            this.add_items.Text = "ADD";
+            this.add_items.UseVisualStyleBackColor = true;
+            this.add_items.Click += new System.EventHandler(this.add_items_Click);
+            // 
+            // dataGridView_selectedItems
+            // 
+            this.dataGridView_selectedItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_selectedItems.Location = new System.Drawing.Point(200, 329);
+            this.dataGridView_selectedItems.Name = "dataGridView_selectedItems";
+            this.dataGridView_selectedItems.RowHeadersWidth = 51;
+            this.dataGridView_selectedItems.RowTemplate.Height = 24;
+            this.dataGridView_selectedItems.Size = new System.Drawing.Size(471, 304);
+            this.dataGridView_selectedItems.TabIndex = 11;
+            this.dataGridView_selectedItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_selectedItems_CellContentClick);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(248, 100);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBox1.Size = new System.Drawing.Size(133, 212);
+            this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(966, 782);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.dataGridView_selectedItems);
+            this.Controls.Add(this.add_items);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -404,11 +420,12 @@
             this.Name = "Orders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Orders_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_selectedItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,8 +441,6 @@
         private System.Windows.Forms.Label lbl_Desserts;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
@@ -446,5 +461,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button add_items;
+        private System.Windows.Forms.DataGridView dataGridView_selectedItems;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

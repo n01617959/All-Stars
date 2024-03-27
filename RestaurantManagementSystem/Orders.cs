@@ -14,15 +14,33 @@ namespace RestaurantManagementSystem
     {
         private EmployeeBLL employeeBLL; // Add field for EmployeeBLL
         private bool isAdmin;
+        private InventoryManager inventoryManager = new InventoryManager();
+
 
         public Orders(EmployeeBLL employeeBLL, bool isAdmin) // Constructor to accept EmployeeBLL
         {
             InitializeComponent();
             this.employeeBLL = employeeBLL; // Assign the passed EmployeeBLL to the field
             this.isAdmin = isAdmin;
+
+            InitializeDataGridViewColumns();
+
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+
+        private void InitializeDataGridViewColumns()
+        {
+            if (dataGridView_selectedItems.Columns.Count == 0)
+            {
+                dataGridView_selectedItems.Columns.Add("Category", "Category");
+
+                dataGridView_selectedItems.Columns.Add("SubCategory", "Sub Category");
+
+                dataGridView_selectedItems.Columns.Add("Price", "Price");
+            }
+        }
+
+            private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -34,7 +52,12 @@ namespace RestaurantManagementSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Dosa");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName); 
+            }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -44,7 +67,7 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments(employeeBLL,isAdmin); // Pass the EmployeeBLL parameter
+            Payments payments = new Payments(employeeBLL,isAdmin); 
             payments.Show();
             this.Hide();
         }
@@ -66,6 +89,36 @@ namespace RestaurantManagementSystem
             Form2 form = new Form2(employeeBLL); // Pass the EmployeeBLL parameter
             form.Show();
             this.Close();
+        }
+
+        private void Orders_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_items_Click(object sender, EventArgs e)
+        {
+            foreach (var selected in listBox1.SelectedItems)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Dosa").FirstOrDefault(i => i.ItemName == selected.ToString());
+                if (item != null)
+                {
+                    var index = dataGridView_selectedItems.Rows.Add();
+                    dataGridView_selectedItems.Rows[index].Cells["Category"].Value = item.Category;
+                    dataGridView_selectedItems.Rows[index].Cells["SubCategory"].Value = item.ItemName;
+                    dataGridView_selectedItems.Rows[index].Cells["Price"].Value = item.Price;
+                }
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_selectedItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

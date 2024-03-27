@@ -51,7 +51,7 @@ namespace RestaurantManagementSystem
                 itemIDTextBox.Text = row.Cells["ItemID"].Value.ToString();
                 itemNameTextBox.Text = row.Cells["ItemName"].Value.ToString();
                 quantityTextBox.Text = row.Cells["Quantity"].Value.ToString();
-                categoryTextBox.Text = row.Cells["Category"].Value.ToString();
+                textBox1.Text = row.Cells["Category"].Value.ToString();
                 priceTextBox.Text = row.Cells["Price"].Value.ToString();
                 descriptionTextBox.Text = row.Cells["Description"].Value.ToString();
             }
@@ -124,7 +124,7 @@ namespace RestaurantManagementSystem
             itemID = 0;
             itemName = itemNameTextBox.Text.Trim();
             quantity = 0;
-            category = categoryTextBox.Text.Trim();
+            category = textBox1.Text.Trim();
             price = 0m;
             description = descriptionTextBox.Text.Trim();
 
@@ -176,7 +176,7 @@ namespace RestaurantManagementSystem
             itemIDTextBox.Text = "";
             itemNameTextBox.Text = "";
             quantityTextBox.Text = "";
-            categoryTextBox.Text = "";
+            textBox1.Text = "";
             priceTextBox.Text = "";
             descriptionTextBox.Text = "";
         }
@@ -189,6 +189,11 @@ namespace RestaurantManagementSystem
                 inventoryGridView.Rows.Add(inventoryItem.ItemID, inventoryItem.ItemName, inventoryItem.Quantity,
                                            inventoryItem.Category, inventoryItem.Price, inventoryItem.Description);
             }
+        }
+
+        private void inventoryGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

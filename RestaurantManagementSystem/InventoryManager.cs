@@ -30,5 +30,12 @@ namespace RestaurantManagementSystem
         {
             return _inventoryDb.GetInventory();
         }
+
+
+
+        public List<Inventory> GetSubCategoriesByCategory(string category)
+        {
+            return _inventoryDb.GetSubCategoriesByCategory(category);
+        }
     }
 }

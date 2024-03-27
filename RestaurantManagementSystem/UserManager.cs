@@ -1,34 +1,40 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿/*using System;
+using System.Data.SqlClient;
 
 namespace RestaurantManagementSystem
 {
-    // This class is used to mange user operations
     public class UserManager
     {
-        private List<User> _validUsers;
+        private readonly DatabaseManager _databaseManager;
 
-        public UserManager()
+        public UserManager(DatabaseManager databaseManager)
         {
-            // Initialize the list of valid users
-            _validUsers = new List<User>
-            {
-                new User { Username = "Allstars", Password = "123" },
-                // Add more valid users if needed
-            };
+            _databaseManager = databaseManager;
         }
 
         public bool ValidateUser(string username, string password)
         {
-            foreach (var user in _validUsers)
+            try
             {
-                if (user.Username == username && user.Password == password)
+                using (SqlConnection connection = new SqlConnection(_databaseManager.ConnectionString))
                 {
-                    return true;
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM user_table WHERE username = @Username AND password = @Password";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", password); // Consider hashing the password
+                        int count = (int)command.ExecuteScalar();
+                        return count > 0;
+                    }
                 }
             }
-            return false;
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error validating user: " + ex.Message);
+                return false;
+            }
         }
     }
 }
+*/
