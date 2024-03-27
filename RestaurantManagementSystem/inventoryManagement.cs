@@ -73,11 +73,14 @@ namespace RestaurantManagementSystem
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            if (TryGetInputValues(out int itemID, out string itemName, out int quantity,
+             if (TryGetInputValues(out int itemID, out string itemName, out int quantity,
                                    out string category, out decimal price, out string description))
             {
                 Inventory newInventory = new Inventory(itemID, itemName, quantity, category, price, description);
                 inventoryManager.AddInventory(newInventory);
+
+
+
 
                 UpdateDataGridView();
                 ClearTextBoxes();

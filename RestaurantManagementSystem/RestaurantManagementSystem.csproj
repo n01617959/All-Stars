@@ -177,6 +177,9 @@
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminManager.cs" />
+    <Compile Include="Bill.cs" />
+    <Compile Include="BillDB.cs" />
+    <Compile Include="BillManager.cs" />
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeBLL.cs" />

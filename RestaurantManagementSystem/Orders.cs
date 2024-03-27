@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,7 @@ namespace RestaurantManagementSystem
             {
                 listBox1.Items.Add(item.ItemName); 
             }
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -75,19 +77,27 @@ namespace RestaurantManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             //have to display the subtotal , hst, total
-            double subtotal = 0;
-            double hst = 0;
-            double total = 0;
+            decimal subtotal = 0;
+            decimal hst = 0;
+            decimal total = 0;
             foreach (DataGridViewRow row in dataGridView_selectedItems.Rows)
             {
-                subtotal += Convert.ToDouble(row.Cells["Price"].Value);
+                subtotal += Convert.ToDecimal(row.Cells["Price"].Value);
             }
-            hst = subtotal * 0.13;
+            hst = subtotal * 0.13m;
             total = subtotal + hst;
 
             textBox1.Text = subtotal.ToString();
             textBox2.Text = hst.ToString();
             textBox3.Text = total.ToString();
+
+           /* var items = inventoryManager.GetSubCategoriesByCategory("Dosa");
+            BillManager billManager = new BillManager();
+            foreach (var item in items)
+            {
+                Bill bill = new Bill(item.ItemID,item.Category,item.ItemName,item.Price,subtotal,hst,total);
+                billManager.AddBill(bill);
+            }*/
 
         }
 

@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\All-Stars\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\billdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\billdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\billmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\billmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,40 +51,12 @@
       "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|c:\\users\\hp\\source\\repos\\all-stars\\restaurantmanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanagement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,16 +99,8 @@
       "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\salarydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|solutionrelative:restaurantmanagementsystem\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF902C0C-E8FA-4EF1-926D-672DBDFB23BB}|RestaurantManagementSystem\\RestaurantManagementSystem.csproj|C:\\Users\\HP\\source\\repos\\All-Stars\\restaurantmanagementsystem\\employeebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,11 +158,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form2.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\Form2.cs",
@@ -175,99 +175,128 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Orders.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Orders.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\Orders.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T19:45:09.95Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\Form1.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAWwE0AAAAgAAAA",
+              "DocumentIndex": 5,
+              "Title": "BillManager.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\BillManager.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\BillManager.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\BillManager.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\BillManager.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.91Z",
+              "WhenOpened": "2024-03-27T19:48:04.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\AdminDashboard.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs [Design]",
-              "RelativeToolTip": "RestaurantManagementSystem\\AdminDashboard.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "BillDB.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\BillDB.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\BillDB.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\BillDB.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\BillDB.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAawCQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T18:02:28.796Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-27T18:06:28.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryDb.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryDb.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\InventoryDb.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryDb.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\InventoryDb.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T04:48:26.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdminDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\AdminDashboard.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\AdminDashboard.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAWwDgAAAAMAAAA",
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryManager.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\InventoryManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T18:20:16.104Z",
+              "WhenOpened": "2024-02-29T03:49:05.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "inventoryManagement.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\inventoryManagement.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs [Design]",
+              "RelativeToolTip": "RestaurantManagementSystem\\inventoryManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T00:28:03.921Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "inventoryManagement.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\inventoryManagement.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\inventoryManagement.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAewFEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T13:17:57.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Bill.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Bill.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Bill.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\Bill.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T18:10:37.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Orders.cs [Design]",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\Orders.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs [Design]",
               "RelativeToolTip": "RestaurantManagementSystem\\Orders.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.914Z",
+              "WhenOpened": "2024-03-27T19:44:55.859Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Orders.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Orders.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Orders.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\Orders.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAAAGAAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form2.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Form2.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form2.cs [Design]",
-              "RelativeToolTip": "RestaurantManagementSystem\\Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.916Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs [Design]",
-              "RelativeToolTip": "RestaurantManagementSystem\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.918Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "DatabaseManager.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\DatabaseManager.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\DatabaseManager.cs",
@@ -280,45 +309,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InventoryDb.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryDb.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\InventoryDb.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryDb.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\InventoryDb.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T04:48:26.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "inventoryManagement.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\inventoryManagement.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\inventoryManagement.cs",
-              "ViewState": "AQIAALQAAAAAAAAAAAAAAMgAAAAhAAAA",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "RestaurantManagementSystem\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T13:17:57.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "inventoryManagement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\inventoryManagement.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.cs [Design]",
-              "RelativeToolTip": "RestaurantManagementSystem\\inventoryManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-15T00:28:03.921Z",
+              "WhenOpened": "2024-02-15T00:28:03.918Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Inventory.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Inventory.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Inventory.cs",
+              "RelativeToolTip": "RestaurantManagementSystem\\Inventory.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T04:48:14.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "AdminDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementSystem\\AdminDashboard.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.cs [Design]",
+              "RelativeToolTip": "RestaurantManagementSystem\\AdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:02:28.796Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "inventoryManagement.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\inventoryManagement.Designer.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\inventoryManagement.Designer.cs",
@@ -331,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\packages.config",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\packages.config",
@@ -343,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "AdminDashboard.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminDashboard.Designer.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\AdminDashboard.Designer.cs",
@@ -355,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "SalaryBLL.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\SalaryBLL.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\SalaryBLL.cs",
@@ -368,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Employee.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\Employee.cs",
@@ -380,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AdminManager.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\AdminManager.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\AdminManager.cs",
@@ -392,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "StaffManagement.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\StaffManagement.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\StaffManagement.cs",
@@ -404,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "SalaryDAL.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\SalaryDAL.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\SalaryDAL.cs",
@@ -416,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\Program.cs",
@@ -429,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "EmployeeSalary.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\EmployeeSalary.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\EmployeeSalary.cs",
@@ -453,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\User.cs",
               "RelativeDocumentMoniker": "RestaurantManagementSystem\\User.cs",
@@ -462,30 +490,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-28T17:27:44.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Inventory.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\Inventory.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\Inventory.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\Inventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T04:48:14.316Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "RestaurantManagementSystem\\InventoryManager.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\All-Stars\\RestaurantManagementSystem\\InventoryManager.cs",
-              "RelativeToolTip": "RestaurantManagementSystem\\InventoryManager.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-29T03:49:05.82Z"
             },
             {
               "$type": "Document",
