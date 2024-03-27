@@ -26,7 +26,9 @@ namespace RestaurantManagementSystem
             DialogResult res = MessageBox.Show("Are you sure you want to Log out", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
+                Form1 form1 = new Form1();
+                form1.Show();
             }
         }
 

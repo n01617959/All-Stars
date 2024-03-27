@@ -12,7 +12,7 @@ namespace RestaurantManagementSystem
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
-            _databaseManager = new DatabaseManager("Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;TrustServerCertificate=true;");
+            _databaseManager = new DatabaseManager("Server=LAPTOP-EITE4OAK;Database=MasterDB;Trusted_Connection=True;");
             _databaseManager.ConnectToDatabase();
 
             // Instantiate EmployeeBLL
@@ -75,7 +75,7 @@ namespace RestaurantManagementSystem
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
     }
 }

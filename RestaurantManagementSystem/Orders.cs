@@ -74,13 +74,27 @@ namespace RestaurantManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //have to display the subtotal , hst, total
+            double subtotal = 0;
+            double hst = 0;
+            double total = 0;
+            foreach (DataGridViewRow row in dataGridView_selectedItems.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["Price"].Value);
+            }
+            hst = subtotal * 0.13;
+            total = subtotal + hst;
+
+            textBox1.Text = subtotal.ToString();
+            textBox2.Text = hst.ToString();
+            textBox3.Text = total.ToString();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented", "Clear", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //delete the selected row
+            MessageBox.Show("Are you sure you want to delete this row?");
 
         }
 

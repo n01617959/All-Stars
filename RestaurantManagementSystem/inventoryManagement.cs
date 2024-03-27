@@ -198,6 +198,11 @@ namespace RestaurantManagementSystem
 
         private void inventoryManagement_Load(object sender, EventArgs e)
         {
+            UpdateDataGridView();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

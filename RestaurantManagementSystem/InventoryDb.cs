@@ -9,7 +9,7 @@ namespace RestaurantManagementSystem
     public class InventoryDb
     {
         // Updated with your provided connection string
-        private string connectionString = "Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;TrustServerCertificate=true;";
+        private string connectionString = "Server=LAPTOP-EITE4OAK;Database=MasterDB;Trusted_Connection=True;";
 
         public void AddInventory(Inventory inventory)
         {
