@@ -19,5 +19,15 @@ namespace RestaurantManagementSystem
         {
             _billDb.AddBill(bill);
         }
+
+        public void RemoveBill(int itemID)
+        {
+            _billDb.DeleteBill(itemID);
+        }
+
+        public List<Bill> GetBills()
+        {
+            return _billDb.GetAllBills();
+        }
     }
 }

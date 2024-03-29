@@ -16,6 +16,14 @@ namespace RestaurantManagementSystem
         private EmployeeBLL employeeBLL; // Add field for EmployeeBLL
         private bool isAdmin;
         private InventoryManager inventoryManager = new InventoryManager();
+        private BillManager billManager = new BillManager();
+        private List<Bill> checkoutItems = new List<Bill>();
+        public bool DosaClicked = false;
+        public bool BeveragesClicked = false;
+        public bool DessertsClicked = false;
+        public bool SoupsClicked = false;
+        public bool BiryaniClicked = false;
+        public bool ChefSpecialClicked = false;
 
 
         public Orders(EmployeeBLL employeeBLL, bool isAdmin) // Constructor to accept EmployeeBLL
@@ -53,6 +61,7 @@ namespace RestaurantManagementSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
+            DosaClicked = true;
             listBox1.Items.Clear();
             var items = inventoryManager.GetSubCategoriesByCategory("Dosa");
             foreach (var item in items)
@@ -69,9 +78,10 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments(employeeBLL,isAdmin); 
+            Payments payments = new Payments(checkoutItems,employeeBLL, isAdmin);
             payments.Show();
-            this.Hide();
+            this.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,27 +94,49 @@ namespace RestaurantManagementSystem
             {
                 subtotal += Convert.ToDecimal(row.Cells["Price"].Value);
             }
-            hst = subtotal * 0.13m;
+            hst = subtotal * 0.10m;
             total = subtotal + hst;
 
             textBox1.Text = subtotal.ToString();
             textBox2.Text = hst.ToString();
             textBox3.Text = total.ToString();
 
-           /* var items = inventoryManager.GetSubCategoriesByCategory("Dosa");
-            BillManager billManager = new BillManager();
-            foreach (var item in items)
+            //add the gridviewlist items to bill table no need to select
+            foreach (var item in checkoutItems)
             {
-                Bill bill = new Bill(item.ItemID,item.Category,item.ItemName,item.Price,subtotal,hst,total);
-                billManager.AddBill(bill);
-            }*/
+                item.Sub_Total = subtotal;
+                item.HST = hst;
+                item.Total = total;
+                billManager.AddBill(item);
+            }
+            MessageBox.Show("Bill added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //clear the gridview
+            dataGridView_selectedItems.Rows.Clear();
+            listBox1.Items.Clear();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //delete the selected row
-            MessageBox.Show("Are you sure you want to delete this row?");
+            //remove the selected item from the gridview
+            if (dataGridView_selectedItems.SelectedRows.Count > 0)
+            {
+                var dialogResult = MessageBox.Show("Are you sure you want to delete this item?","Alert",MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+                else if (dialogResult == DialogResult.Yes)
+                {
+                    dataGridView_selectedItems.Rows.RemoveAt(dataGridView_selectedItems.SelectedRows[0].Index);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
+
 
         }
 
@@ -123,17 +155,82 @@ namespace RestaurantManagementSystem
 
         private void add_items_Click(object sender, EventArgs e)
         {
-            foreach (var selected in listBox1.SelectedItems)
+            //add the selected item to the gridview
+            if (DosaClicked)
             {
-                var item = inventoryManager.GetSubCategoriesByCategory("Dosa").FirstOrDefault(i => i.ItemName == selected.ToString());
-                if (item != null)
+                var item = inventoryManager.GetSubCategoriesByCategory("Dosa");
+                foreach (var items in item)
                 {
-                    var index = dataGridView_selectedItems.Rows.Add();
-                    dataGridView_selectedItems.Rows[index].Cells["Category"].Value = item.Category;
-                    dataGridView_selectedItems.Rows[index].Cells["SubCategory"].Value = item.ItemName;
-                    dataGridView_selectedItems.Rows[index].Cells["Price"].Value = item.Price;
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
                 }
+                //add the selected item to the checkoutItems list
+                foreach (var items in item)
+                {
+                    checkoutItems.Add(new Bill(items.ItemID, items.ItemName, items.Category, items.Price,0, 0, 0));
+                }
+                DosaClicked = false;
             }
+            else if(BeveragesClicked)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Beverages");
+                foreach (var items in item)
+                {
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
+                }
+                foreach (var items in item)
+                {
+                    checkoutItems.Add(new Bill(items.ItemID, items.ItemName, items.Category, items.Price, 0, 0, 0));
+                }
+                BeveragesClicked = false;
+            }
+            else if (DessertsClicked)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Desserts");
+                foreach (var items in item)
+                {
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
+                }
+                foreach (var items in item)
+                {
+                    checkoutItems.Add(new Bill(items.ItemID, items.ItemName, items.Category, items.Price, 0, 0, 0));
+                }
+                DessertsClicked = false;
+            }
+            else if (SoupsClicked)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Soups");
+                foreach (var items in item)
+                {
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
+                }
+                foreach (var items in item)
+                {
+                    checkoutItems.Add(new Bill(items.ItemID, items.ItemName, items.Category, items.Price, 0, 0, 0));
+                }
+                SoupsClicked = false;
+            }
+            else if (BiryaniClicked)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Biryani");
+                foreach (var items in item)
+                {
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
+                }
+                foreach (var items in item)
+                {
+                    checkoutItems.Add(new Bill(items.ItemID, items.ItemName, items.Category, items.Price, 0, 0, 0));
+                }
+                BiryaniClicked = false;
+            }
+            else if (ChefSpecialClicked)
+            {
+                var item = inventoryManager.GetSubCategoriesByCategory("Chef Special");
+                foreach (var items in item)
+                {
+                    dataGridView_selectedItems.Rows.Add(items.Category, items.ItemName, items.Price);
+                }
+                ChefSpecialClicked = false;
+            }   
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,5 +248,61 @@ namespace RestaurantManagementSystem
 
 
         }
+
+        private void lblBeverages_Click(object sender, EventArgs e)
+        {
+            BeveragesClicked = true;
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Beverages");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName);
+            }
+        }
+
+        private void lbl_Desserts_Click(object sender, EventArgs e)
+        {
+            DessertsClicked = true;
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Desserts");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName);
+            }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            SoupsClicked = true;
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Soups");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName);
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            BiryaniClicked = true;
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Biryani");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ChefSpecialClicked = true;
+            listBox1.Items.Clear();
+            var items = inventoryManager.GetSubCategoriesByCategory("Chef Special");
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.ItemName);
+            }
+        }
+
     }
 }

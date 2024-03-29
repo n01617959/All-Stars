@@ -174,6 +174,7 @@
             this.label3.Size = new System.Drawing.Size(133, 28);
             this.label3.TabIndex = 10;
             this.label3.Text = "Biryani";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -185,6 +186,7 @@
             this.label2.Size = new System.Drawing.Size(133, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Chef Special";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel5
             // 
@@ -204,6 +206,7 @@
             this.lblBeverages.Size = new System.Drawing.Size(89, 24);
             this.lblBeverages.TabIndex = 3;
             this.lblBeverages.Text = "Beverages";
+            this.lblBeverages.Click += new System.EventHandler(this.lblBeverages_Click);
             // 
             // lbl_Desserts
             // 
@@ -215,6 +218,7 @@
             this.lbl_Desserts.Size = new System.Drawing.Size(89, 24);
             this.lbl_Desserts.TabIndex = 2;
             this.lbl_Desserts.Text = "Desserts";
+            this.lbl_Desserts.Click += new System.EventHandler(this.lbl_Desserts_Click);
             // 
             // label1
             // 
@@ -226,6 +230,7 @@
             this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Soups";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblDosa
             // 

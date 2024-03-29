@@ -36,9 +36,63 @@ namespace RestaurantManagementSystem
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Bill added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        public void DeleteBill(int itemNo)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM Bills WHERE Item_No = @Item_No";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Item_No", itemNo);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Bill deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        //Get all bills
+
+        public List<Bill> GetAllBills()
+        {
+            List<Bill> billslist = new List<Bill>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Bills";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Bill bill = new Bill(
+                                Convert.ToInt32(reader["Item_No"]),
+                                reader["Sub_category"].ToString(),
+                                reader["Category"].ToString(),
+                                Convert.ToDecimal(reader["Price"]),
+                                Convert.ToDecimal(reader["Sub_Total"]),
+                                Convert.ToDecimal(reader["HST"]),
+                                Convert.ToDecimal(reader["Total"])
+                           );
+
+                            billslist.Add(bill);
+                        }
+                    }
+                }
+            }
+
+            return billslist;
         }
     
     }
