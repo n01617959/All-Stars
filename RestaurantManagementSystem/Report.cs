@@ -26,7 +26,20 @@ namespace RestaurantManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("not implemented");
+            //if user select sales sales from the combo box and click on the generate report button it should list details from bills list
+            if (comboBox1.Text == "Sales")
+            {
+                //Get the whole list of bills which is in billDb
+                BillDB billDB = new BillDB();
+
+                List<Bill> bills = billDB.GetAllBills();
+
+                //Display the list of bills in the data grid view
+                foreach (var bill in bills)
+                {
+                    dataGridView1.Rows.Add(bill.Item_No,bill.Category ,bill.Sub_category, bill.Price);
+                }
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
