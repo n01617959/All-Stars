@@ -6,7 +6,7 @@ namespace RestaurantManagementSystem
     public partial class Form1 : Form
     {
         private readonly DatabaseManager _databaseManager;
-        private readonly EmployeeBLL _employeeBLL; // Add this line
+        private readonly EmployeeBLL _employeeBLL;
 
         public Form1()
         {
@@ -16,7 +16,7 @@ namespace RestaurantManagementSystem
             _databaseManager.ConnectToDatabase();
 
             // Instantiate EmployeeBLL
-            _employeeBLL = new EmployeeBLL(); // Instantiate as needed, pass necessary parameters if any
+            _employeeBLL = new EmployeeBLL();
         }
 
         private void button1_Click(object sender, EventArgs e)
